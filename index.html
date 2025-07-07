@@ -3,38 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kavya D G - DevOps Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <title>Kavya D G - DevOps & SRE Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
+      color: #1f2937;
     }
     header {
       background: #1f2937;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
-    h1 { margin: 0; }
+    h1 {
+      margin-bottom: 0.3rem;
+      font-size: 2.5rem;
+    }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem;
     }
     section {
       margin-bottom: 3rem;
     }
-    .project {
-      margin-bottom: 1.5rem;
+    h2 {
+      font-size: 1.6rem;
+      color: #111827;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+    .project, .experience-item {
+      background: #ffffff;
       padding: 1rem;
-      background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1.5rem;
     }
     a {
       color: #2563eb;
@@ -43,61 +54,112 @@
     a:hover {
       text-decoration: underline;
     }
+    ul {
+      padding-left: 1.2rem;
+    }
     footer {
+      background: #e5e7eb;
       text-align: center;
       padding: 1rem;
-      color: #888;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Kavya D G</h1>
-    <p>DevOps | CloudOps | SRE Enthusiast</p>
+    <p>DevOps & Site Reliability Engineer • AWS & Azure • Terraform • CI/CD • ECS • Docker</p>
   </header>
 
   <main>
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm a DevOps engineer with hands-on experience in automating infrastructure using Terraform, Ansible, and Docker. I have worked with AWS, ECS, RDS, CloudWatch, and GitHub Actions to build secure, scalable, and observable cloud-native systems.
+        I’m a Site Reliability Engineer with a strong background in infrastructure automation, CI/CD, and cloud-native monitoring.
+        Experienced with AWS and Azure ecosystems, my passion lies in building scalable, observable, and resilient systems. I enjoy
+        creating clean Terraform architectures, automating pipelines with GitHub Actions, and ensuring production uptime through solid incident management.
       </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <h3>Site Reliability Engineer – Travtech Software</h3>
+        <p><strong>Jan 2024 – Present • Bangalore, India</strong></p>
+        <ul>
+          <li>Provisioned AWS infrastructure with Terraform (ECS, RDS, S3, IAM, Lambda).</li>
+          <li>Developed CI/CD pipelines using GitHub Actions for zero-downtime deployments.</li>
+          <li>Implemented observability using ELK Stack, Amazon CloudWatch, and Grafana dashboards.</li>
+          <li>Built Docker-based ECS workloads with secure VPC networking and secrets management.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Data Operations Associate – Amazon</h3>
+        <p><strong>Mar 2022 – Jul 2023 • Bangalore, India</strong></p>
+        <ul>
+          <li>Led RCA on production issues and enhanced incident workflows.</li>
+          <li>Boosted alert visibility with improved on-call dashboards and escalation matrices.</li>
+          <li>Worked cross-functionally with operations and engineering teams to maintain SLA/SLO adherence.</li>
+        </ul>
+      </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
 
       <div class="project">
-        <h3>🔧 Terraform AWS Modules</h3>
-        <p>Modular infrastructure setup for VPC, EC2, ALB, ECS. Used IAM roles and SSM for secure access.</p>
-        <a href="https://github.com/kavyaganesh3/terraform-aws-modules" target="_blank">View on GitHub</a>
+        <h3>Terraform AWS Infrastructure Modules</h3>
+        <p>Modular codebase for provisioning VPC, ECS, ALB, RDS, and IAM with full parameterization and reuse.</p>
+        <a href="https://github.com/kavyaganesh3/terraform-aws-modules" target="_blank">View Project</a>
       </div>
 
       <div class="project">
-        <h3>🚀 CI/CD Pipeline with GitHub Actions</h3>
-        <p>Automated deployment of Dockerized app to ECS Fargate with staging and production environments.</p>
-        <a href="https://github.com/kavyaganesh3/devops-cicd-pipeline" target="_blank">View on GitHub</a>
+        <h3>CI/CD Pipeline with GitHub Actions</h3>
+        <p>Pipeline that builds Docker containers, runs tests, and deploys apps to ECS Fargate environments.</p>
+        <a href="https://github.com/kavyaganesh3/devops-cicd-pipeline" target="_blank">View Project</a>
       </div>
 
       <div class="project">
-        <h3>📈 Centralized Logging with CloudWatch</h3>
-        <p>Configured ECS services to push logs to CloudWatch. Added Slack alerts for error conditions.</p>
-        <a href="https://github.com/kavyaganesh3/cloudwatch-ecs-logging" target="_blank">View on GitHub</a>
+        <h3>Cloud Monitoring with CloudWatch & Grafana</h3>
+        <p>Integrated ECS service logs and metrics into CloudWatch and Grafana, with Slack alerting via Lambda.</p>
+        <a href="https://github.com/kavyaganesh3/cloudwatch-ecs-logging" target="_blank">View Project</a>
       </div>
+    </section>
+
+    <section id="skills">
+      <h2>Core Skills</h2>
+      <ul>
+        <li><strong>Cloud Platforms:</strong> AWS (ECS, EC2, RDS, S3, IAM), Azure</li>
+        <li><strong>IaC:</strong> Terraform, Ansible</li>
+        <li><strong>Containers & Orchestration:</strong> Docker, ECS, Kubernetes (basic)</li>
+        <li><strong>Monitoring:</strong> ELK, CloudWatch, Grafana, Splunk</li>
+        <li><strong>CI/CD & Automation:</strong> GitHub Actions, Bash, Python, PowerShell</li>
+        <li><strong>Incident Management:</strong> RCA, alert tuning, SLO/SLA</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Amazon Certified Cloud Practitioner — <em>June 2023 to June 2026</em></li>
+      </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:kavyaganesh262001@gmail.com">kavyaganesh262001@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/kavyaganesh3" target="_blank">github.com/kavyaganesh3</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/kavyaganesh3" target="_blank">linkedin.com/in/kavyaganesh3</a></p>
+      <p><strong>Email:</strong> <a href="mailto:kavyaganesh262001@gmail.com">kavyaganesh262001@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 9380425969</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/kavyaganesh3" target="_blank">github.com/kavyaganesh3</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/kavyaganesh3" target="_blank">linkedin.com/in/kavyaganesh3</a></p>
+      <p><strong>Location:</strong> Kodagu, Karnataka, India</p>
     </section>
   </main>
 
   <footer>
-    © 2025 Kavya D G • Hosted with GitHub Pages
+    © 2025 Kavya D G — Built with ❤️ using GitHub Pages
   </footer>
 </body>
 </html>
-
